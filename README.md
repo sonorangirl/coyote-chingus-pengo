@@ -1,7 +1,7 @@
 # coyote-chingus-pengo
 A practice project to reverse engineer the Pengo bot
 
-## File Structure
+## Original File Structure
 ```yml
 app/                          # Core bot backend
   |- getCommand.js            # Their WIP backend helper to search the linux man pages. (Try `/pengo bash abc` in Slack).
@@ -21,4 +21,11 @@ package.json                  # npm package info.
 server.js                     # ENTRY POINT: 
                               # contains app route path endpoints 
                               # ( GET /auth, GET /, POST / ) where "/" is the root
+```
+
+## Practice File Structure
+```yml
+README.md       # Project description.
+quotes.json     # Data file to simulate database (the quote data never changes during runtime).
+server.js       # node.js entry point.
 ```
