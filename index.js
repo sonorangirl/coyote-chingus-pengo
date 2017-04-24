@@ -64,7 +64,7 @@ app.get('/auth', function(request, response) {
   // Attach the OAuth handshake code to base API URL.
   var authUrl = baseUrl + '&code=' + req.query.code;
   // request lib signature: .get([urlstring], [function callback(error, result){}])
-  sendHttpRequest.get(authUrl, handleAuthResponse);
+  sendHttpRequest.get(authUrl, handleAuthResponse(response));
 });
 
 // Bind application to the environment's port and log to console.
