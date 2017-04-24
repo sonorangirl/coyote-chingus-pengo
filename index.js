@@ -58,7 +58,7 @@ function handleAuthResponse(response) {
 // This needs to be added to the app's settings at https://api.slack.com/apps
 app.get('/auth', function(request, response) {
   // Require an OAuth handshake code to continue.
-  if (request.body.code === undefined) {
+  if (request.query.code === undefined) {
   	return response.redirect('/');
   }
   // Attach the OAuth handshake code to base API URL.
